@@ -51,7 +51,7 @@ exports.getAdvice = async (req, res) => {
       Provide SHORT and CONCISE water saving advice based on the following user data. 
       Keep your total response under 250 words.
       
-      User's daily water usage: ${waterUsage.total} liters (${waterUsage.comparisonToAverage}% of average consumption)
+      User's daily water usage: ${waterUsage.total} liters (${waterUsage.comparisonToAverage}% of average daily consumption of 4000 liters)
       Highest usage category: ${waterUsage.highestCategory}
       
       User's key habits:

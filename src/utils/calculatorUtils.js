@@ -189,8 +189,7 @@ exports.calculateTotalWaterUsage = (userData) => {
   const monthlyUsage = dailyUsage * 30;
   const yearlyUsage = dailyUsage * 365;
   
-  // Calculate comparison with average consumption (150 liters per day per person)
-  // Calculate average based on default form values (approximately 4000 liters per day)
+  // Calculate comparison with average consumption (4000 liters per day per person)
   const averageConsumption = 4000;
   const comparisonToAverage = Math.round((dailyUsage / averageConsumption) * 100);
   

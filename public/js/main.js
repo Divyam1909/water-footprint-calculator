@@ -4,6 +4,23 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Wave text animation initialization
+  const initWaveTextAnimation = () => {
+    const waveText = document.querySelector('.wave-text');
+    const waveTextAnimated = document.querySelector('.wave-text-animated');
+    
+    if (waveText && waveTextAnimated) {
+      // Make sure the text is centered and sized properly
+      setTimeout(() => {
+        waveText.style.opacity = 1;
+        waveTextAnimated.style.opacity = 1;
+      }, 100);
+    }
+  };
+  
+  // Initialize wave text animation
+  initWaveTextAnimation();
+  
   // Elements
   const form = document.getElementById('water-calculator-form');
   const resultsSection = document.getElementById('results');
@@ -68,6 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Outdoor</h4>
           <p>Garden watering: 12 liters per minute × duration × frequency ÷ 7 days</p>
           <p>Car washing: 150 liters per wash ÷ 30 days (for monthly rate)</p>
+          
+          <h4>Average Consumption</h4>
+          <p>The average daily water usage is calculated as 4000 liters per person, based on default values in the calculator.</p>
         </div>
       </div>
     `;
@@ -90,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const addCalculationInfoButton = () => {
     const infoButton = document.createElement('button');
     infoButton.className = 'btn btn-info calculation-info-btn';
-    infoButton.textContent = 'How is this calculated?';
+    infoButton.innerHTML = '<span>How is this calculated?</span>';
     infoButton.addEventListener('click', showCalculationInfo);
     
     const resultsHeader = document.querySelector('.results-header');
