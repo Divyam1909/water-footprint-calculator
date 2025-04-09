@@ -1,0 +1,255 @@
+<div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Understand Your Water Footprint</h1>
+      <p>Discover how your daily habits impact water usage and learn personalized ways to conserve this precious resource.</p>
+      <a href="#calculator" class="btn btn-primary">Calculate Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="/images/water-drop.svg" alt="Water drop illustration">
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section id="calculator" class="calculator-section">
+    <div class="section-header">
+      <h2>Water Footprint Calculator</h2>
+      <p>Answer a few questions about your lifestyle to see your daily water consumption</p>
+    </div>
+
+    <div class="calculator">
+      <form id="water-calculator-form" class="calculator-form">
+        <!-- Step 1: Personal Hygiene -->
+        <div class="form-step" data-step="1">
+          <h3>Personal Hygiene</h3>
+          
+          <div class="form-group">
+            <label for="shower">How long is your average shower? (minutes)</label>
+            <input type="number" id="shower" name="shower" min="0" max="60" value="8" placeholder="e.g., 8">
+            <span class="helper-text">Average shower uses about 10 liters per minute (Default: 8 minutes)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="baths">How many baths do you take per week?</label>
+            <input type="number" id="baths" name="baths" min="0" max="21" value="1" placeholder="e.g., 1">
+            <span class="helper-text">A full bath uses about 80 liters of water (Default: 1 bath/week)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="toiletFlushes">How many times do you flush the toilet daily?</label>
+            <input type="number" id="toiletFlushes" name="toiletFlushes" min="0" max="20" value="5" placeholder="e.g., 5">
+            <span class="helper-text">Average toilet uses 6 liters per flush (Default: 5 flushes/day)</span>
+          </div>
+          
+          <div class="form-navigation">
+            <button type="button" class="btn btn-next" data-next="2">Next: Household</button>
+          </div>
+        </div>
+        
+        <!-- Step 2: Household -->
+        <div class="form-step" data-step="2">
+          <h3>Household</h3>
+          
+          <div class="form-group">
+            <label for="dishwasher">How many dishwasher loads do you run per week?</label>
+            <input type="number" id="dishwasher" name="dishwasher" min="0" max="21" value="3" placeholder="e.g., 3">
+            <span class="helper-text">Modern dishwashers use about 15 liters per load (Default: 3 loads/week)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="handWashDishes">If you don't use a dishwasher, how many times do you hand wash dishes daily?</label>
+            <input type="number" id="handWashDishes" name="handWashDishes" min="0" max="10" value="1" placeholder="e.g., 1">
+            <span class="helper-text">Hand washing dishes uses about 20 liters each time (Default: 1 time/day)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="laundry">How many loads of laundry do you do per week?</label>
+            <input type="number" id="laundry" name="laundry" min="0" max="21" value="3" placeholder="e.g., 3">
+            <span class="helper-text">Average washing machine uses 50 liters per load (Default: 3 loads/week)</span>
+          </div>
+          
+          <div class="form-navigation">
+            <button type="button" class="btn btn-prev" data-prev="1">Previous</button>
+            <button type="button" class="btn btn-next" data-next="3">Next: Diet</button>
+          </div>
+        </div>
+        
+        <!-- Step 3: Diet -->
+        <div class="form-step" data-step="3">
+          <h3>Diet</h3>
+          <div class="info-box">
+            <p>Diet accounts for a large portion of your water footprint! The water needed to produce your food is often called "virtual water."</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="diet">What type of diet do you follow?</label>
+            <select id="diet" name="diet">
+              <option value="balanced">Balanced (Moderate meat consumption)</option>
+              <option value="meat-heavy">Meat-heavy (Meat with most meals)</option>
+              <option value="vegetarian">Vegetarian (No meat, but dairy/eggs)</option>
+              <option value="vegan">Vegan (Plant-based only)</option>
+            </select>
+            <span class="helper-text">A meat-heavy diet uses ~5000L/day, balanced ~3500L/day, vegetarian ~2500L/day, vegan ~1700L/day</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="riceConsumption">Rice consumption (kg per week):</label>
+            <input type="number" id="riceConsumption" name="riceConsumption" min="0" max="10" step="0.1" value="1" placeholder="e.g., 1">
+            <span class="helper-text">1 kg of rice requires about 3,400 liters of water (Default: 1 kg/week)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="wheatConsumption">Wheat consumption (kg per week):</label>
+            <input type="number" id="wheatConsumption" name="wheatConsumption" min="0" max="10" step="0.1" value="1.5" placeholder="e.g., 1.5">
+            <span class="helper-text">1 kg of wheat requires about 1,300 liters of water (Default: 1.5 kg/week)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="milkConsumption">Milk consumption (liters per day):</label>
+            <input type="number" id="milkConsumption" name="milkConsumption" min="0" max="5" step="0.1" value="0.3" placeholder="e.g., 0.3">
+            <span class="helper-text">1 liter of milk requires about 1,000 liters of water (Default: 0.3 L/day)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="meatConsumption">Meat consumption (kg per week):</label>
+            <input type="number" id="meatConsumption" name="meatConsumption" min="0" max="10" step="0.1" value="0.5" placeholder="e.g., 0.5">
+            <span class="helper-text">1 kg of meat requires 4,000-8,000 liters of water (Default: 0.5 kg/week)</span>
+          </div>
+          
+          <div class="form-navigation">
+            <button type="button" class="btn btn-prev" data-prev="2">Previous</button>
+            <button type="button" class="btn btn-next" data-next="4">Next: Outdoor</button>
+          </div>
+        </div>
+        
+        <!-- Step 4: Outdoor -->
+        <div class="form-step" data-step="4">
+          <h3>Outdoor</h3>
+          
+          <div class="form-group">
+            <label for="garden">How many times per week do you water your garden or plants?</label>
+            <input type="number" id="garden" name="garden" min="0" max="21" value="2" placeholder="e.g., 2">
+            <span class="helper-text">Default: 2 times/week (Enter 0 if you don't have a garden)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="gardenDuration">For how many minutes each time?</label>
+            <input type="number" id="gardenDuration" name="gardenDuration" min="0" max="120" value="15" placeholder="e.g., 15">
+            <span class="helper-text">Garden hose uses about 12 liters per minute (Default: 15 minutes)</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="carWash">How many times per month do you wash your car at home?</label>
+            <input type="number" id="carWash" name="carWash" min="0" max="10" value="1" placeholder="e.g., 1">
+            <span class="helper-text">Home car wash uses about 150 liters of water (Default: 1 time/month)</span>
+          </div>
+          
+          <div class="form-navigation">
+            <button type="button" class="btn btn-prev" data-prev="3">Previous</button>
+            <button type="submit" class="btn btn-calculate">Calculate My Footprint</button>
+          </div>
+        </div>
+      </form>
+      
+      <!-- Results Section (Hidden by default) -->
+      <div id="results" class="results-section">
+        <div class="results-header">
+          <h3>Your Water Footprint Results</h3>
+          <p class="results-overview">Based on your inputs, here's your estimated water usage:</p>
+        </div>
+        
+        <div class="results-total">
+          <div class="water-drop">
+            <span id="total-usage">0</span>
+            <small>liters per day</small>
+          </div>
+          <div class="usage-comparison">
+            <p>That's <span id="comparison-percentage">0</span>% of the average daily water usage (150 liters)</p>
+            <p>Monthly usage: <span id="monthly-usage">0</span> liters | Yearly: <span id="yearly-usage">0</span> liters</p>
+          </div>
+        </div>
+        
+        <div class="results-breakdown">
+          <h4>Usage Breakdown</h4>
+          <div class="charts-container">
+            <div class="chart-container">
+              <canvas id="breakdownChart"></canvas>
+            </div>
+            <div class="chart-container">
+              <canvas id="categoryBarChart"></canvas>
+            </div>
+          </div>
+          <div class="breakdown-legend" id="breakdown-legend">
+            <!-- Will be populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Dietary Breakdown section -->
+        <div class="dietary-breakdown" id="dietary-breakdown-section">
+          <h4>Dietary Water Footprint</h4>
+          <div class="chart-container">
+            <canvas id="dietaryBreakdownChart"></canvas>
+          </div>
+          <div class="dietary-info">
+            <p>Daily water consumption for your food choices:</p>
+            <ul id="dietary-breakdown-list">
+              <!-- Will be populated by JS -->
+            </ul>
+            <p class="info-text">Did you know? The water footprint of food production accounts for over 70% of global freshwater consumption.</p>
+          </div>
+        </div>
+        
+        <div class="results-advice">
+          <h4>Personalized Water-Saving Advice</h4>
+          <div id="advice-container" class="advice-container">
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+              <p>Generating personalized advice with AI...</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="results-actions">
+          <button id="save-results" class="btn btn-secondary">Save Results</button>
+          <button id="share-results" class="btn btn-secondary">Share Results</button>
+          <button id="recalculate" class="btn btn-primary">Recalculate</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>Our water footprint calculator uses scientifically backed data combined with AI insights</p>
+    </div>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <h3>Input Your Data</h3>
+        <p>Answer simple questions about your daily habits and lifestyle choices.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-icon">2</div>
+        <h3>Calculate Your Footprint</h3>
+        <p>Our algorithm calculates your water usage based on established water consumption rates.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-icon">3</div>
+        <h3>Get AI-Powered Advice</h3>
+        <p>Receive personalized recommendations from Google's Gemini AI to reduce your water consumption.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-icon">4</div>
+        <h3>Take Action</h3>
+        <p>Implement the suggestions and track your progress towards water conservation.</p>
+      </div>
+    </div>
+  </section>
+</div> 

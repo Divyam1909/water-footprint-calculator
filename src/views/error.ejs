@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="error-page">
+    <div class="error-icon">
+      <img src="/images/error.svg" alt="Error">
+    </div>
+    <h1>Oops! Something went wrong</h1>
+    <p><%= message %></p>
+    <% if (process.env.NODE_ENV === 'development' && error) { %>
+      <div class="error-details">
+        <pre><%= error.stack %></pre>
+      </div>
+    <% } %>
+    <a href="/" class="btn btn-primary">Back to Home</a>
+  </div>
+</div> 

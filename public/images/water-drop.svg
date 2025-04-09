@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Water Drop</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="dropGradient">
+            <stop stop-color="#3498DB" offset="0%"></stop>
+            <stop stop-color="#2980B9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,20 C100,20 160,90 160,140 C160,173.137 133.137,200 100,200 C66.8629,200 40,173.137 40,140 C40,90 100,20 100,20 Z" fill="url(#dropGradient)"></path>
+        <path d="M80,120 C80,120 95,100 110,120 C125,140 110,160 90,150 C70,140 80,120 80,120 Z" fill="#FFFFFF" fill-opacity="0.3"></path>
+    </g>
+</svg> 
